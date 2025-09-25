@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const prisma = new PrismaClient();
 
 async function main() {
-  const plain = '123456@Abc'; // bạn có thể đổi
+  const plain = '123456@Abc'; 
   const hashed = await bcrypt.hash(plain, 10);
 
   const user = await prisma.user.upsert({

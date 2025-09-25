@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'routes/app_pages.dart';
+import 'features/auth/login_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,8 +15,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
         useMaterial3: true,
       ),
-      initialRoute: AppPages.initial,
-      getPages: AppPages.routes,
+      initialRoute: '/login',
+      getPages: [
+        GetPage(name: '/login', page: () => const LoginView()),
+        GetPage(name: '/', page: () => const MainNav()),
+      ],
     );
   }
 }
