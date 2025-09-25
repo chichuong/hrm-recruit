@@ -9,6 +9,7 @@ async function start() {
     await prisma.$connect();
     console.log('✅ Prisma connected to MySQL');
     app.locals.prisma = prisma;
+    const API_PREFIX = '/api';    
 
     app.listen(PORT, () => {
       console.log(`🚀 Server listening on http://localhost:${PORT}`);
