@@ -21,3 +21,9 @@ npm install
 npx prisma generate
 thêm .env để cài đặt môi trường
 npm run dev
+
+
+### Mobile
+cd hrm_recruit_app
+flutter pub get
+flutter run
